@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity Example 05</title>
+    <style>
+        nav {
+            padding-left: 200px;
+        }
+
+        ul {
+            margin: 8px 0 0 0;
+            padding: 0;
+            width: 100px;
+            text-align: center;
+        }
+
+        li {
+            border-bottom: 1px solid #cecfd5;
+        }
+
+        li:last-child {
+            border-bottom: 0;
+        }
+
+        a {
+            color: #0087cc;
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff7b29;
+        }
+
+        .first {
+            list-style-type: lower-roman;
+        }
+
+        .second {
+            list-style-type: upper-roman !important;
+
+        }
+
+        li:nth-child(3) {
+            list-style-type: decimal;
+        }
+
+        li:nth-child(4) {
+            list-style-type: decimal;
+        }
+
+        li>a[href*="#"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="first"><a href="#">Home</a></li>
+            <li class="second"><a href="#">About</a></li>
+            <li style="list-style-type: lower-alpha;"><a href="#">Services</a></li>
+            <li class="first second"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

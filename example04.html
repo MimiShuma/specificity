@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Specificity Example 04</title>
+    <link rel="stylesheet" href="external.css">
+</head>
+<style>
+    ul {
+        padding-left: 100px;
+    }
+
+    li {
+
+        list-style-type: lower-roman;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .first {
+        list-style-type: square !important;
+    }
+
+    .second {
+        list-style-type: decimal;
+    }
+
+    a[href="#"] {
+        font-size: 30px;
+    }
+
+    #third {
+        font-size: 70px;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>List item 01</li>
+        <li class="first second">List item 02</li>
+        <li><a href="#" id="third" style="font-size: 70px;">List item 03</a></li>
+        <li class="second" id="third"><span>List item 04</span></li>
+    </ul>
+</body>
+
+</html>
